@@ -19,7 +19,7 @@ func main() {
 
 	// flags declaration using flag package
 	flag.StringVar(&htmlFn, "html", "gowebform.html", "Specify HTML form to serve.")
-	flag.StringVar(&json_fn, "json", "gowebform.json", "Specify JSON file to store received POST form data.")
+	flag.StringVar(&jsonFn, "json", "gowebform.json", "Specify JSON file to store received POST form data.")
 	flag.StringVar(&port, "port", ":8000", "Specify port for HTTPS enabled webserver.")
 	flag.StringVar(&serverCrt, "cert", "server.crt", "Specify TLS certificate file.")
 	flag.StringVar(&serverKey, "key", "server.key", "Specify TLS key file.")
