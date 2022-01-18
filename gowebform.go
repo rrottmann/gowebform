@@ -12,8 +12,8 @@ import (
 func main() {
 	// variables read from cmdline
 	var port string
-	varhtmlFn string
-	varjsonFn string
+	var htmlFn string
+	var jsonFn string
 	var serverCrt string
 	var serverKey string
 
@@ -30,8 +30,8 @@ func main() {
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		switch r.Method {
 		case "GET":
-            http.ServeFile(w, r,htmlFn)
-            
+			http.ServeFile(w, r, htmlFn)
+
 		case "POST":
 			// Call ParseForm() to parse the raw query and update r.PostForm and r.Form.
 			if err := r.ParseForm(); err != nil {
